@@ -14,4 +14,4 @@ console.log(str.trimStart()); // Delete space at the begin
 
 console.log(str.padStart(10)); // '     Hello'. Set min length string
 console.log(str.padStart(10, 1234)); // '12341Hello'
-console.log(str.padStart(8, abc)); // 'Helloabc'
+console.log(str.padStart(8, 'abc')); // 'Helloabc'

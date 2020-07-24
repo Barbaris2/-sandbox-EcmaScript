@@ -69,3 +69,39 @@ const obj = { a: 1, b: 2, c: 3 };
 console.log(Object.entries(obj)); // [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]
 console.log(Object.keys(obj)); // [ 'a', 'b', 'c' ]
 console.log(Object.values(obj)); // [ 1, 2, 3 ]
+
+// New 2020
+
+const person2 = {
+  name: 'Alex',
+  age: 30
+};
+console.log(Object.getOwnPropertyDescriptor(person2, 'age')); // { value: 30, writable: true, enumerable: true, configurable: true }
+
+console.log(Object.getOwnPropertyDescriptors(person2));
+/* {
+  name: {
+    value: 'Alex',
+    writable: true,
+    enumerable: true,
+    configurable: true
+  },
+  age: { value: 30, writable: true, enumerable: true, configurable: true }
+} */
+
+console.log(Object.entries(person2)); // [ [ 'name', 'Alex' ], [ 'age', 30 ] ]
+console.log(
+  Object.fromEntries([
+    ['name', 'Alex'],
+    ['age', 30]
+  ])
+); // { name: 'Alex', age: 30 }
+
+console.log(Object.entries(['A', 'l', 'e', 'x']));
+// [ [ '0', 'A' ], [ '1', 'l' ], [ '2', 'e' ], [ '3', 'x' ] ]
+
+for (const [key, value] of Object.entries(person2)) {
+  console.log(`${JSON.stringify(key)}: ${JSON.stringify(value)}`);
+}
+// "name": "Alex"
+// "age": 30
