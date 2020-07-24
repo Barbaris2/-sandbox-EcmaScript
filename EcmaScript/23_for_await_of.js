@@ -27,3 +27,12 @@ async function modern() {
 }
 
 modern();
+
+/* Modern 1
+Modern 2
+Old 1
+Old 2
+Old 3
+Old 4
+Modern 3
+Modern 4 */
